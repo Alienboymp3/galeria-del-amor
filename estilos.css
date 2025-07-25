@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5c7c7;
+  text-align: center;
+  padding: 20px;
+}
+
+#titulo {
+  font-family: 'Old English Text MT', cursive;
+  font-size: 48px; /* o el tamaño que desees */
+  color: #d6336c; /* opcional: cambia el color */
+  text-align: center;
+  position: relative;
+  animation: brillar 2.5s infinite;
+}
+
+@keyframes brillar {
+  0%, 100% {
+    text-shadow: 0 0 10px #f3e39b, 0 0 20px #f1e533, 0 0 30px #ffd51a;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #eceb8c, 0 0 40px #e7d466;
+  }
+}
+
+h1 {
+  color: #fde037;
+  margin-bottom: 30px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icono-flotante {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  animation: flotar 3s ease-in-out infinite;
+  transition: transform 0.2s;
+  transform: translateY(0); /* punto base */
+}
+
+.icono-flotante:hover {
+  transform: translateY(0) scale(1.2); /* combina ambas transformaciones */
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-contenido.combinado {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imagenExpandida {
+  animation: zoomIn 1.5s ease-out;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.frase-superpuesta {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.747);
+  padding: 20px;
+  border-radius: 15px;
+  font-family: 'Lato', serif;
+  max-width: 80%;
+  font-size: 13px;
+  text-align: center;
+  color: #e2e2e2;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+#cerrarFrase {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #d6336c;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.frase-superpuesta {
+  /* ya existente */
+  display: none;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0; /* inicio transparente */
+}
+
+#controlMusica {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff0f5;
+  border: 1px solid #d6336c;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #d6336c;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+#controlMusica:hover {
+  background-color: #ffe0ec;
+}
+
+@keyframes fadeZoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.modal-contenido.combinado.cerrando {
+  animation: fadeZoomOut 0.4s ease forwards;
+}
+
+
+.typewriter {
+  font-family: 'Lucida Sans Typewriter', cursive;
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  top: -20px; /* mueve 10px hacia arriba */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ff69b4;
+  animation: escribir 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  width: 0;
+  margin: 0 auto; /* centra horizontalmente */
+  display: inline-block; /* necesario para centrar con auto */
+}
+
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+  to {
+    width: 140px; /* ajusta al ancho total del texto */
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #ff69b4; }
+}
+
+/* Opcional: quitar la barrita luego de escribir */
+.typewriter.done {
+  border-right: none;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.icono-flotante {
+  animation: flotar 3s ease-in-out infinite;
+}
