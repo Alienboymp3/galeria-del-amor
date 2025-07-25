@@ -7,7 +7,7 @@ body {
 
 #titulo {
   font-family: 'Manufacturing Consent', serif;
-  font-size: 60px; /* o el tamaño que desees */
+  font-size: 48px; /* o el tamaño que desees */
   color: #423421; /* opcional: cambia el color */
   text-align: center;
   position: relative;
@@ -133,17 +133,17 @@ h1 {
   right: 20px;
   background-color: #dbd6bd;
   border: 1px solid #533b16;
-  padding: 10px 15px;
+  padding: 5px 6px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 10px;
   color: #291e0b;
   z-index: 1000;
   transition: background 0.3s;
 }
 
 #controlMusica:hover {
-  background-color: #f7ccb8;
+  background-color: #dad86b;
 }
 
 @keyframes fadeZoomOut {
@@ -163,7 +163,7 @@ h1 {
 
 .typewriter {
   font-family: 'Lora', cursive;
-  font-size: 16px;
+  font-size: 14px;
   color: #000000;
   text-align: center;
   position: relative;
@@ -188,7 +188,7 @@ h1 {
 
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
-  50% { border-color: #ff69b4; }
+  50% { border-color: #834fa5; }
 }
 
 /* Opcional: quitar la barrita luego de escribir */

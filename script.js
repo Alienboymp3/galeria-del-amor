@@ -200,9 +200,9 @@ window.onclick = function(event) {
     if (audio.paused) {
       audio.volume = 1.0;
       audio.play();
-      boton.textContent = '🔇 Sound Off';
+      boton.textContent = '🔇 Off';
     } else {
       audio.pause();
-      boton.textContent = '🔈 Sound On';
+      boton.textContent = '🔈 On';
     }
   });
