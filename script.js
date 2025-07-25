@@ -200,13 +200,14 @@ window.onclick = function(event) {
   const boton = document.getElementById('controlMusica');
   const audio = document.getElementById('musica');
 
-  boton.addEventListener('click', function () {
+  boton.addEventListener('click', () => {
     if (audio.paused) {
+      audio.volume = 1.0;
       audio.play();
-      boton.textContent = '🔇 Pausar música';
+      boton.textContent = '🔇 Sound Off';
     } else {
       audio.pause();
-      boton.textContent = '🔈 Música';
+      boton.textContent = '🔈 Sound On';
     }
   });
 
