@@ -143,7 +143,6 @@ const frases = [
 ];
 
 const iconos = ['🌸','🌟','💖','🌼','🌈','✨','💐','💫','❤️','🌻','🌹','💝','🎀','🍓','🦋','🌺','🎇','🍒','🌞','💌','🌙','🌷','🌟','🎉','💘','🎵','🫶','🎶','🌤','💕','🌟','🍃','🎈','🌊','🎠'];
-
 const galeria = document.getElementById('galeria');
 const imagenModal = document.getElementById('imagenModal');
 const imagenExpandida = document.getElementById('imagenExpandida');
@@ -174,18 +173,15 @@ fraseSuperpuesta.style.animation = "fadeIn 0.6s ease forwards";;
   });
   galeria.appendChild(btn);
 }
-
 // Cerrar la frase, pero mantener la imagen visible
 cerrarFrase.onclick = () => {
   fraseSuperpuesta.style.display = "none";
 };
-
 // Cerrar todo al hacer clic fuera
 window.onclick = function(event) {
   if (event.target === imagenModal) {
     const contenido = document.querySelector('.modal-contenido.combinado');
-
-    // Agrega clase para animar salida
+// Agrega clase para animar salida
     contenido.classList.add('cerrando');
 
     // Espera a que la animación termine
@@ -210,5 +206,3 @@ window.onclick = function(event) {
       boton.textContent = '🔈 Sound On';
     }
   });
-
-
