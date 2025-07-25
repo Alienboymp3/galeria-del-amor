@@ -1,14 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f5c7c7;
+  background: #e9d2a9;
   text-align: center;
   padding: 20px;
 }
 
 #titulo {
-  font-family: 'Old English Text MT', cursive;
-  font-size: 48px; /* o el tamaño que desees */
-  color: #d6336c; /* opcional: cambia el color */
+  font-family: 'Manufacturing Consent', serif;
+  font-size: 60px; /* o el tamaño que desees */
+  color: #423421; /* opcional: cambia el color */
   text-align: center;
   position: relative;
   animation: brillar 2.5s infinite;
@@ -86,7 +86,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.747);
   padding: 20px;
   border-radius: 15px;
-  font-family: 'Lato', serif;
+  font-family: 'Roboto', serif;
   max-width: 80%;
   font-size: 13px;
   text-align: center;
@@ -101,7 +101,7 @@ h1 {
   right: 15px;
   font-size: 22px;
   cursor: pointer;
-  color: #d6336c;
+  color: #d6cb33;
 }
 
 @keyframes zoomIn {
@@ -131,19 +131,19 @@ h1 {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #fff0f5;
-  border: 1px solid #d6336c;
+  background-color: #dbd6bd;
+  border: 1px solid #533b16;
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  color: #d6336c;
+  color: #291e0b;
   z-index: 1000;
   transition: background 0.3s;
 }
 
 #controlMusica:hover {
-  background-color: #ffe0ec;
+  background-color: #f7ccb8;
 }
 
 @keyframes fadeZoomOut {
@@ -162,7 +162,7 @@ h1 {
 }
 
 .typewriter {
-  font-family: 'Footlight MT Light', cursive;
+  font-family: 'Lora', cursive;
   font-size: 16px;
   color: #000000;
   text-align: center;
@@ -170,7 +170,7 @@ h1 {
   top: -20px; /* mueve 10px hacia arriba */
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #ff69b4;
+  border-right: 2px solid #faf7f0;
   animation: escribir 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
   width: 0;
   margin: 0 auto; /* centra horizontalmente */
@@ -207,7 +207,7 @@ h1 {
 }
 
 .frase-final {
-  font-family: Footlight MT, sans-serif;
+  font-family: Lora;
   margin-top: 40px;
   padding: 20px;
   font-size: 1.1rem;
