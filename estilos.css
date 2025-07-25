@@ -129,14 +129,14 @@ h1 {
 
 #controlMusica {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   background-color: #dbd6bd;
   border: 1px solid #533b16;
   padding: 5px 6px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 8px;
   color: #291e0b;
   z-index: 1000;
   transition: background 0.3s;
