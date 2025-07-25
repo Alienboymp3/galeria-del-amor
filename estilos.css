@@ -50,8 +50,6 @@ h1 {
   transform: translateY(0) scale(1.2); /* combina ambas transformaciones */
 }
 
-
-
 .modal {
   display: none;
   position: fixed;
@@ -163,10 +161,9 @@ h1 {
   animation: fadeZoomOut 0.4s ease forwards;
 }
 
-
 .typewriter {
-  font-family: 'Lucida Sans Typewriter', cursive;
-  font-size: 12px;
+  font-family: 'Footlight MT Light', cursive;
+  font-size: 16px;
   color: #000000;
   text-align: center;
   position: relative;
@@ -207,4 +204,47 @@ h1 {
 
 .icono-flotante {
   animation: flotar 3s ease-in-out infinite;
+}
+
+.frase-final {
+  font-family: Footlight MT, sans-serif;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  color: #1a1516;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #titulo {
+    font-size: 1.8rem;
+  }
+
+  #subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+  }
+
+  .frase-final {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #controlMusica {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
 }
