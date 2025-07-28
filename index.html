@@ -7,6 +7,34 @@
   <link rel="stylesheet" href="estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Manufacturing+Consent&family=Roboto&display=swap" rel="stylesheet">
 </head>
+
+<script>
+// Cerrar la imagen si se hace clic fuera de ella o de la frase
+  ["click", "touchstart"].forEach(evt => {
+    document.getElementById("imagenModal").addEventListener(evt, function (e) {
+      const contenido = document.querySelector(".modal-contenido");
+// Si se hizo clic FUERA del contenido
+      if (!contenido.contains(e.target)) {
+        contenido.classList.add("cerrando");
+        setTimeout(() => {
+          document.getElementById("imagenModal").style.display = "none";
+          contenido.classList.remove("cerrando");
+
+          // 🔁 Mostrar el botón de música nuevamente
+          document.getElementById("controlMusica").style.display = "block";
+        }, 400);
+      }
+    });
+  });
+
+  // 🖼️ Suponiendo que ya tienes una función para mostrar la imagen expandida...
+  // Asegúrate de ocultar el botón cuando abras el modal.
+  function mostrarImagenExpandida() {
+    document.getElementById("imagenModal").style.display = "flex";
+    document.getElementById("controlMusica").style.display = "none";
+  }
+</script>
+
 <body>
   <h1 id="titulo">Galería del Amor</h1>
   <h2 id="subtitulo" class="typewriter">De: Alienboy 👽<br>Para: Kris ♥️</h2>

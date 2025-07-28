@@ -161,6 +161,7 @@ for (let i = 0; i < 35; i++) {
     imagenExpandida.src = `imagenes/Foto${i + 1}.png`;
     fraseSuperpuesta.style.display = "none";
     imagenModal.style.display = "flex";
+    document.getElementById("controlMusica").style.display = "none";
     imagenExpandida.onclick = () => {
       fraseTexto.innerHTML = `${frases[i].texto}<br><br><em>— ${frases[i].autor}</em>`;
 
@@ -189,6 +190,7 @@ window.onclick = function(event) {
       imagenModal.style.display = "none";
       fraseSuperpuesta.style.display = "none";
       contenido.classList.remove('cerrando');
+      document.getElementById("controlMusica").style.display = "block";
     }, 400); // misma duración que la animación
   }
 };
