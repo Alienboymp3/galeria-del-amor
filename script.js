@@ -178,22 +178,69 @@ fraseSuperpuesta.style.animation = "fadeIn 0.6s ease forwards";;
 cerrarFrase.onclick = () => {
   fraseSuperpuesta.style.display = "none";
 };
+
+
+
+
+
+
+
+
+
+// Cerrar imagen si se toca fuera de la imagen o frase
+const modal = document.getElementById("imagenModal");
+const contenido = document.querySelector(".modal-contenido");
+
+function cerrarModal() {
+  contenido.classList.add("cerrando");
+  setTimeout(() => {
+    modal.style.display = "none";
+    contenido.classList.remove("cerrando");
+    document.getElementById("controlMusica").style.display = "block";
+    document.getElementById("fraseSuperpuesta").style.display = "none";
+  }, 400);
+}
+
+modal.addEventListener("click", (e) => {
+  if (!contenido.contains(e.target)) {
+    cerrarModal();
+  }
+});
+
+// ✅ para iPhone / Safari
+modal.addEventListener("touchstart", (e) => {
+  if (!contenido.contains(e.target)) {
+    cerrarModal();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 // Cerrar todo al hacer clic fuera
-window.onclick = function(event) {
-  if (event.target === imagenModal) {
-    const contenido = document.querySelector('.modal-contenido.combinado');
+//window.onclick = function(event) {
+//  if (event.target === imagenModal) {
+//    const contenido = document.querySelector('.modal-contenido.combinado');
 // Agrega clase para animar salida
-    contenido.classList.add('cerrando');
+//    contenido.classList.add('cerrando');
 
     // Espera a que la animación termine
-    setTimeout(() => {
-      imagenModal.style.display = "none";
-      fraseSuperpuesta.style.display = "none";
-      contenido.classList.remove('cerrando');
-      document.getElementById("controlMusica").style.display = "block";
-    }, 400); // misma duración que la animación
-  }
-};
+//    setTimeout(() => {
+//      imagenModal.style.display = "none";
+//      fraseSuperpuesta.style.display = "none";
+//      contenido.classList.remove('cerrando');
+//      document.getElementById("controlMusica").style.display = "block";
+//    }, 400); // misma duración que la animación
+//  }
+//};
 
   const boton = document.getElementById('controlMusica');
   const audio = document.getElementById('musica');
